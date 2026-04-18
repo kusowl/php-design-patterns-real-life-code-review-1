@@ -1,6 +1,18 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
-require 'config/init.php';
+
+use App\Config\Config;
+use App\Controllers\HomeController;
+use App\Controllers\UserController;
+include __DIR__.'/vendor/autoload.php';
+
+$host = Config::getValue('db_host');
+$db = Config::getValue('db_name');
+$username = Config::getValue('db_user');
+$password = Config::getValue('db_pass');
 
 $dbHandle = new PDO("mysql:host=$host;dbname=$db", $username, $password);
 $dbHandle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
