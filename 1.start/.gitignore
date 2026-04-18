@@ -1,0 +1,14 @@
+# Composer
+/vendor/
+composer.lock
+
+# PHP
+*.cache
+*.tmp
+*.temp
+
+# PHPStan
+.phpstan/
+
+# Logs
+*.log
