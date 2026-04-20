@@ -16,6 +16,11 @@
   },
   "require": {
     "php": ">= 8.5",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "symfony/http-kernel": "^8.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^8.0",
+    "ext-xdebug": "*"
   }
 }

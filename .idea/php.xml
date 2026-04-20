@@ -7,6 +7,11 @@
       </laravel_pint_by_interpreter>
     </laravel_pint_settings>
   </component>
+  <component name="MessDetector">
+    <phpmd_settings>
+      <phpmd_by_interpreter asDefaultInterpreter="true" interpreter_id="e3f9b924-86b3-4779-9ad6-8b1b04aa1cdd" timeout="30000" />
+    </phpmd_settings>
+  </component>
   <component name="MessDetectorOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
@@ -30,6 +35,17 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/1.start/vendor/composer" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/polyfill-php85" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/1.start/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/1.start/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/1.start/vendor/symfony/error-handler" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.5">
