@@ -1,17 +1,24 @@
 <?php
+session_start();
 use App\Core\Config;
 use App\Controllers\HomeController;
 use App\Controllers\UserController;
+use App\Core\DB;
+
 include __DIR__.'/vendor/autoload.php';
 
 $host = Config::getValue('db_host');
 $db = Config::getValue('db_name');
 $username = Config::getValue('db_user');
 $password = Config::getValue('db_pass');
-$dbHandle = new PDO("mysql:host=$host;dbname=$db", $username, $password);
-$dbHandle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$dbHandle->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
+DB::init($host, $db, $username, $password);
+try {
+    $db = DB::getInstance();
+} catch (Exception $e) {
+    die('Database connection failed: ' . $e->getMessage());
+}
+$dbHandle = $db->getConnection();
 
 //TODO: Create Router class and make improvements
 
