@@ -1,5 +1,5 @@
 <?php
-namespace App\Config;
+namespace App\Core;
 class Config
 {
     /**
@@ -26,7 +26,6 @@ class Config
 
     private function __construct()
     {
-        echo "constructing..";
         self::$values['db_host'] = 'localhost';
         self::$values['db_name'] = 'code_review1';
         self::$values['db_user'] = 'kushal';
